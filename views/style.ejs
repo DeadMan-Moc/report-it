@@ -9,6 +9,10 @@
         height: 300px;
         margin: 150px auto;
     }
+
+    .header .container {
+      margin: 0px auto 90px;
+    }
     .container .box {
         position: relative;
         width: calc(400px - 30px);
@@ -60,6 +64,22 @@
       text-align:center;
       background-color: white;
     }
+
+    .parallax {
+      /* The image used */
+      background-image: url("bg_img.jpg");
+
+      /* Set a specific height */
+      height: 300px;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
     /* Animation */
     .parallax > use {
       animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
