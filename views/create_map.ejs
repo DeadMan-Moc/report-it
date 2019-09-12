@@ -5,8 +5,61 @@
      * @param  {H.Map} map      A HERE Map instance within the application
      */
     function moveMapToSandton(map){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(onPositionReceived, locationNotReceived, {timeout:3000});
+        }
+
+        function onPositionReceived(position){
+            var sandtonMarker = new H.map.Marker({lat:position.coords.latitude, lng:position.coords.longitude});
+            map.addObject(sandtonMarker);
+        }
+        
+        function locationNotReceived(positionError){
+            alert("Location not found");
+        }
+        // var sandtonMarker = new H.map.Marker({lat:-26.107567, lng:28.056702});
+        // map.addObject(sandtonMarker);
         map.setCenter({lat:-26.107567, lng:28.056702});
-        map.setZoom(14);
+        map.setZoom(12);
+    }
+
+    /**
+     * Adds a circle over New Delhi with a radius of 1000 metres onto the map
+     *
+     * @param  {H.Map} map      A HERE Map instance within the application
+     */
+    function addCircleToMap(map){
+    map.addObject(new H.map.Circle(
+        // The central point of the circle
+        {lat:-26.107567, lng:28.056702},
+        // The radius of the circle in meters
+        5000,
+        {
+        style: {
+            strokeColor: 'rgba(55, 85, 170, 0.6)', // Color of the perimeter
+            lineWidth: 2,
+            // fillColor: 'rgba(0, 128, 0, 0.7)'  // Color of the circle
+        }
+        }
+    ));
+    }
+
+    /**
+     * Adds a rectangle to the map
+     *
+     * @param  {H.Map} map      A HERE Map instance within the application
+     */
+    function addRectangleToMap(map) {
+    var boundingBox = new H.geo.Rect(-26.05, 27.95, -26.15, 28.15);
+    map.addObject(
+        new H.map.Rect(boundingBox, {
+        style: {
+            // fillColor: '#FFFFCC',
+            strokeColor: '#E8FA75',
+            lineWidth: 1
+        },
+        })
+    );
     }
     
     /**
@@ -40,6 +93,8 @@
     
     // Now use the map as required...
     window.onload = function () {
+        // var loc = getLocation();
         moveMapToSandton(map);
+        addRectangleToMap(map);
     }
 </script>
