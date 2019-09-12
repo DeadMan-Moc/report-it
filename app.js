@@ -3,8 +3,6 @@ var app = express();
 var engine = require('ejs-locals');
 var PORT;
 
-
-
 app.engine('ejs', engine);
 app.set("view engine", "ejs");
 
