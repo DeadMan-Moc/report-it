@@ -23,6 +23,7 @@ photo = document.getElementById('photo');
     document.getElementById('capture').addEventListener('click', function(){
         context.drawImage(video, 0, 0, 400, 300);
         photo.value = canvas.toDataURL('image/png');
+        console.log(photo.value);
     });
 
     document.getElementById('file').onchange = function(e) {
@@ -39,13 +40,6 @@ photo = document.getElementById('photo');
         console.error("The provided file couldn't be loaded as an Image media");
     }
 })();
-
-//emojis
-function insertEmo(id){
-    var img = document.getElementById(id);
-    context.drawImage(img, 0, 0, 400, 300);
-    photo.value = canvas.toDataURL('image/png');
-}
 
 // clear canvas
 function clearCanvas(){
