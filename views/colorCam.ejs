@@ -8,23 +8,36 @@
 }
 
 .camField{
-    float:left;
+    max-width: 70%;
     background-color: #ccc;
     border: 10px solid #ddd;
-    margin: 0px 0px;
+    margin: 20px auto;
 }
 
 .picField{
-    float:right;
+    position: absolute; 
+    width: 70%;
+    top: 20px;
+    left: 173px;
     z-index: 10;
     border: 10px solid #ddd;
-    position: absolute; 
     height: 300px;
     margin: 0px 0px;
+    display: none;
 }
 
 .buts{
-    margin: 10px 0px 0px 0px;
+    /* display: inline-block !important; */
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.buts button {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
 }
 
 .camBtn{
@@ -83,7 +96,7 @@
     border: 10px solid #ddd;
 }
 
-img{
+img {
     margin: 2%;
 }
 
