@@ -3,7 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var conf = {
+  "TWITTER_CONSUMER_KEY": "FRIVyo4Ax525WaxgnygIUGwqS",
+  "TWITTER_CONSUMER_SECRET": "aXh9CAFBQkTn5b2IU9vhPJLmRaJa7BTyRIHyaEWY2PaDkVqdiK",
+  "TWITTER_BEARER_TOKEN":"AAAAAAAAAAAAAAAAAAAAAMMGAAEAAAAAl1zaFxbJVrz1UQJs0bFu8psu%2F8w%3DASpTSRv8J4KQ8qeHuzK1qafQ911CMXjK6KMTLLvpHf5yqHa0SP"
+}
 
+var Twitter = require('twitter');
 // var indexRouter = require('./routes/index');
 // var adminRouter = require('./routes/admin');
 // var usersRouter = require('./routes/users');
@@ -24,7 +30,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 // app.post('/admin', (req, res) => res.render('admin', { title: 'Express' }));
+
+
+var client = new Twitter({
+  consumer_key: conf.TWITTER_CONSUMER_KEY,
+  consumer_secret: conf.TWITTER_CONSUMER_SECRET,
+  bearer_token: conf.TWITTER_BEARER_TOKEN
+});
+
 app.get('/', (req, res) => {
+  console.log(conf);
+  client.get('search/tweets', {q: '#ios #swift'}, function(error, tweets, response) {
+    console.log("Makes it into the client request function.");
+    console.log(tweets);
+    // console.log(response);
+    // console.log(error);
+    // tweets.statuses.forEach(function(tweet) {
+    //   console.log("tweet: " + tweet.text)
+    // });
+  });
   res.render('index', { title: 'Express' });
 });
 
