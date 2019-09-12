@@ -1,0 +1,165 @@
+<style>
+    @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+body {
+  margin:0;
+}
+.button{
+  background-color: rgb(28, 80, 177); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 13px;
+  border-color: rgb(0, 47, 100)
+}
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-size:50px;
+  padding-bottom: 10px;
+}
+.container {
+    position: relative ;
+    height: 300px;
+    width: 1200px;
+    margin: 240px auto;
+}
+.container .body {
+    position: relative;
+    width: calc("400px -30px");
+    height: calc("300px - 30px");
+    background-color: hsl(207, 52%, 49%);
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 13px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+.header {
+  position:relative;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color: whitesmoke;
+}
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+/* .flex { /*Flexbox for containers*/
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  
+} */
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+/* .content {
+  position:relative;
+  height:20vh;
+ 
+  background-color: white;
+} */
+/* Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
+
+.flip-card-back {
+  background-color:#d1ebff ;
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+/* section {
+    background-repeat: no-repeat;
+    
+  background-size: cover;
+  height: 100%;
+}
+body {
+    background-color : #BFEAFF;
+    
+}
+.text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: bold;
+    text-align: center;
+}
+.btn-cnt {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408199), color-stop(1, #213538));
+    background:-moz-linear-gradient(top, #408199 5%, #213538 100%);
+    background:-webkit-linear-gradient(top, #408199 5%, #213538 100%);
+    background:-o-linear-gradient(top, #408199 5%, #213538 100%);
+    background:-ms-linear-gradient(top, #408199 5%, #213538 100%);
+    background:linear-gradient(to bottom, #408199 5%, #213538 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408199', endColorstr='#213538',GradientType=0);
+    background-color:#408199;
+    -moz-border-radius:14px;
+    -webkit-border-radius:14px;
+    border-radius:14px;
+    border:1px solid #030405;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Courier New;
+    font-size:20px;
+    font-weight:bold;
+    padding:10px 32px;
+    text-decoration:none;
+}
+p {
+    text-align: center;
+    font-size: 50px;
+} */
+</style>

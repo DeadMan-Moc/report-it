@@ -17,20 +17,10 @@
             <div class="picField">
                 <canvas id="canvas" width="400" height="300"></canvas>
             </div>
-            <div id="pose">
-                <img id="e1" src="emojis/i1.png" width="45%" height="130px" onclick="insertEmo('e1')" style="margin: 10px 2%;"/>
-                <img id="e2" src="emojis/i2.png" width="45%" height="130px" onclick="insertEmo('e2')" style="margin: 10px 2%;"/>
-                <img id="e3" src="emojis/i3.png" width="45%" height="130px" onclick="insertEmo('e3')" style="margin: 10px 2%;"/>
-                <img id="e4" src="emojis/i4.png" width="45%" height="130px" onclick="insertEmo('e4')" style="margin: 10px 2%;"/>
-            </div>
         </div>
         <div class="buts">
             <button id="clear" class="clrBtn" onclick="clearCanvas()">Clear</button>
-            <button id="capture" class="capBtn">Capture</button>
-            <form action="funcs/upload.php" method="POST">
-                <input type="hidden" id="photo" name="image_data">
-                <input name="call cam" type="submit" value=" Save pic " id="save" class="camBtn">
-            </form>
+            <a><button id="capture" class="capBtn">Capture</button></a>
         </div>
     </div>
     <% include cam.ejs %>
