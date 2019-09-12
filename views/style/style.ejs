@@ -1,43 +1,34 @@
 <style>
-	@import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
+    @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 body {
+  margin:0;
+}
 
+.container {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 150px auto;
 }
-.button {
-  background-color: rgb(0, 5, 71); 
-  border: solid;
-  border-color: #67b1eb;
-  color: white;
-  padding: 15px 32px;
-
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 13px;
-}
-.container{
-	position: relative;
-	width: 1200px;
-	height: 300px;
-	height: 240px auto;
-}
-.container .box{
-	position: relative;
-	width:calc(400px - 30px);
-	height: calc(300px - 30px);
-	background-color: #67b1eb;
-	margin: 15px;
-	box-sizing: border-box;
-	overflow: hidden;
-	border-radius: 10px;
-	float: left;
+.container .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    float: left;
+    margin: 15px;
+    border: solid;
+    border-style: double;
+    box-sizing: border-box;
+    border-color: black;
+    overflow: hidden;
+    border-radius: 13px;
 }
 h1 {
   font-family: 'Lato', sans-serif;
-  font-size:50px;
-  padding-bottom: 10px;
-
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
 }
 p {
   font-family: 'Lato', sans-serif;
@@ -45,30 +36,18 @@ p {
   font-size:14px;
   color: #333333;
 }
-
 .header {
   position:relative;
-
+  text-align:center;
   background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color: whitesmoke;
+  color:white;
 }
-
 .inner-header {
-  height:65vh;
+ 
   width:100%;
   margin: 0;
   padding: 0;
 }
-
-/* .flex { /*Flexbox for containers*/
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; 
-
- align-content: auto;
-} */
-
 .waves {
   position:relative;
   width: 100%;
@@ -77,16 +56,13 @@ p {
   min-height:100px;
   max-height:150px;
 }
-
-/* .content {
+.content {
   position:relative;
   height:20vh;
- 
+  text-align:center;
   background-color: white;
-} */
-
+}
 /* Animation */
-
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
 }
@@ -127,84 +103,4 @@ p {
     font-size:24px;
   }
 }
-
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 6px 10px 0 rgba(17, 0, 255);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color:#d1ebff ;
-  color: #ffffff;
-  transform: rotateY(180deg);
-}
-/* section {
-	background-repeat: no-repeat;
-	
-  background-size: cover;
-  height: 100%;
-}
-
-body {
-	background-color : #BFEAFF;
-	
-}
-.text {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: bold;
-    text-align: center;
-}
-.btn-cnt {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408199), color-stop(1, #213538));
-	background:-moz-linear-gradient(top, #408199 5%, #213538 100%);
-	background:-webkit-linear-gradient(top, #408199 5%, #213538 100%);
-	background:-o-linear-gradient(top, #408199 5%, #213538 100%);
-	background:-ms-linear-gradient(top, #408199 5%, #213538 100%);
-	background:linear-gradient(to bottom, #408199 5%, #213538 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408199', endColorstr='#213538',GradientType=0);
-	background-color:#408199;
-	-moz-border-radius:14px;
-	-webkit-border-radius:14px;
-	border-radius:14px;
-	border:1px solid #030405;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Courier New;
-	font-size:20px;
-	font-weight:bold;
-	padding:10px 32px;
-	text-decoration:none;
-}
-p {
-	text-align: center;
-	font-size: 50px;
-} */
 </style>
